@@ -1,0 +1,93 @@
+div {
+  border: 2px solid #4775d1;
+  background-color: #b3d9ff;
+}
+
+h1,
+h2,
+h3 {
+  color: #0000b3;
+}
+
+#cabecera {
+  padding: 1.5%;
+  margin-bottom: 5px;
+}
+
+#logo {
+  display: none;
+}
+
+#title {
+  border: none;
+  text-align: center;
+}
+
+#barranav {
+  display: none;
+}
+
+#ident {
+  margin-left: 70%;
+  border: none;
+}
+
+#idtcol {
+  color: transparent;
+}
+
+#barra {
+  float: left;
+}
+
+#paginas {
+  display: none;
+}
+
+#articulo1 {
+  margin-bottom: 5px;
+  height: 9em;
+}
+
+#articulo2 {
+  height: 9em;
+}
+
+#busnot {
+  display: none;
+}
+
+#busq {
+  margin-bottom: 0.5em;
+}
+
+#notic {
+  padding-bottom: 155px;
+}
+
+#medio {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 5px;
+}
+
+#pie {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#Contenido {
+  text-align: center;
+  height: 25em;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+#opciones {
+  display: none;
+}
+
+#opcond {
+  background-color: transparent;
+  border: none;
+}
