@@ -13,13 +13,26 @@ const pool = mysql.createPool({
 let daoUser = new DAOUsers(pool)
 let daoTask = new DAOTasks(pool)
 
-daoTask.getAllTasks('aitor.tilla@ucm.es',cb_getAllTasks)
+daoTask.getAllTasks('aitor.tilla@ucm.es', cb_getAllTasks)
 function cb_getAllTasks(err, result) {
   console.log(
-    '---------------------------------------------------------------------'
+    '******************Probando las clases de taskUser***********************'
   )
+
+  console.log(`daoTask.getAllTasks('aitor.tilla@ucm.es',cb_getAllTasks) => `)
+  if (err) {
+    console.log(err.message)
+  } else if (result) {
+    console.log(result)
+  } else {
+    console.log('correo NO EXISTE')
+  }
+}
+
+daoTask.deleteCompleted('aitor.tilla@ucm.es', cb_deleteCompleted)
+function cb_deleteCompleted(err, result) {
   console.log(
-    `daoTask.getAllTasks('aitor.tilla@ucm.es',cb_getAllTasks) => `
+    `daoTask.deleteCompleted('aitor.tilla@ucm.es', cb_deleteCompleted) => `
   )
   if (err) {
     console.log(err.message)
@@ -30,13 +43,11 @@ function cb_getAllTasks(err, result) {
   }
 }
 
-
-/*
 //para probar la funcion isUserCorrect de daoUser
 daoUser.isUserCorrect('aitor.tilla@ucm.es', 'aitor', cb_isUserCorrect)
 function cb_isUserCorrect(err, result) {
   console.log(
-    '---------------------------------------------------------------------'
+    '******************Probando las clases de daoUser***********************'
   )
   console.log(
     `daoUser.isUserCorrect('aitor.tilla@ucm.es', 'aitor', cb_isUserCorrect) => `
@@ -66,4 +77,4 @@ function cb_getUserImageName(err, result) {
   } else {
     console.log(result)
   }
-}*/
+}
