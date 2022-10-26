@@ -46,7 +46,7 @@ class DAOUsers {
               if (rows.length === 0) {
                 callback(null, '') //no está el usuario con el password proporcionado
               } else {
-                callback(null, rows)
+                callback(null, rows[0].img)
               }
             }
           }

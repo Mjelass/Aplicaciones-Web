@@ -11,11 +11,33 @@ const pool = mysql.createPool({
   database: config.database,
 })
 let daoUser = new DAOUsers(pool)
-//let daoTask = new DAOTasks(pool)
+let daoTask = new DAOTasks(pool)
 
+daoTask.getAllTasks('aitor.tilla@ucm.es',cb_getAllTasks)
+function cb_getAllTasks(err, result) {
+  console.log(
+    '---------------------------------------------------------------------'
+  )
+  console.log(
+    `daoTask.getAllTasks('aitor.tilla@ucm.es',cb_getAllTasks) => `
+  )
+  if (err) {
+    console.log(err.message)
+  } else if (result) {
+    console.log(result)
+  } else {
+    console.log('correo NO EXISTE')
+  }
+}
+
+
+/*
 //para probar la funcion isUserCorrect de daoUser
 daoUser.isUserCorrect('aitor.tilla@ucm.es', 'aitor', cb_isUserCorrect)
 function cb_isUserCorrect(err, result) {
+  console.log(
+    '---------------------------------------------------------------------'
+  )
   console.log(
     `daoUser.isUserCorrect('aitor.tilla@ucm.es', 'aitor', cb_isUserCorrect) => `
   )
@@ -42,6 +64,6 @@ function cb_getUserImageName(err, result) {
   } else if (result == '') {
     console.log('Correo no existe')
   } else {
-    console.log(result[0].img)
+    console.log(result)
   }
-}
+}*/
