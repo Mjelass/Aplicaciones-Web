@@ -1,5 +1,5 @@
 "# Aplicaciones-Web" 
-Entrega del proyecto final de la asignatura de aplicaciones web hecha en pareja con mi compañero Aimar Urteaga Ortiz de Anda .
+Entrega del proyecto final de la asignatura de aplicaciones web en la universidad complutence de Madrid hecha en pareja con mi compañero Aimar Urteaga Ortiz de Anda .
 
 tecnologia que hemos usado :
 html
